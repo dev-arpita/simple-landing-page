@@ -5,6 +5,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    cursor: pointer;
 }
 
 html,
@@ -13,11 +14,10 @@ body {
     padding: 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    background: gray;
 }
 
 .container {
-    max-width: 50rem;
+    max-width: 40rem;
     margin: 0 auto;
     background: #E5E5E5;
     height: 100vh;
@@ -26,9 +26,11 @@ body {
 .hero {
     background: url("bg.jpg");
     background-size: cover;
-    height: 50vh;
-    background-position: 0%;
+}
 
+.hero,
+.hero-subset {
+    height: 50vh;
 }
 
 .hero-subset,
@@ -38,21 +40,20 @@ button {
 }
 
 .hero-subset {
-    height: 50vh;
-    padding: 0 42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4.2rem;
     opacity: 0.8;
 }
 
-.hero,
 .sign-up {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sign-up {
+    display: grid;
+    grid-template-rows: 1fr;
+    place-items: center;
     margin-top: 5rem;
+
 }
 
 .hero-title {
@@ -64,24 +65,88 @@ button {
     font-size: 1.6rem;
 }
 
+.input-field {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
 input {
     border: 1px solid #C7C7C7;
 }
 
 input,
 button {
-    width: 40rem;
+    width: 30rem;
     padding: 1rem 0;
     margin: 1rem 0 2rem;
+    cursor: pointer;
 }
 
 button {
     border: 0;
 }
 
-label {
-    width: 100%;
-    text-align: start;
-    margin-left: 10rem;
 
+@media only screen and (min-width: 769px) {
+    .container {
+        max-width: 70rem;
+    }
+
+    .hero,
+    .hero-subset {
+        height: 70vh;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        width: 70%;
+    }
+
+    .sign-up {
+        grid-template-columns: 1fr 1fr;
+        place-items: start;
+        padding-left: 3rem;
+    }
+
+    input,
+    button {
+        width: 30rem;
+        margin-right: 1rem;
+    }
+
+    button {
+        width: 18rem;
+        place-self: start;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .container {
+        max-width: 100rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+
+    .hero,
+    .hero-subset {
+        height: 100vh;
+        text-align: right;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        width: 90%;
+    }
+
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .sign-up {
+        grid-template-columns: 1fr;
+        place-items: start;
+    }
 }
