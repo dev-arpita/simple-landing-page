@@ -1,0 +1,87 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: gray;
+}
+
+.container {
+    max-width: 50rem;
+    margin: 0 auto;
+    background: #E5E5E5;
+    height: 100vh;
+}
+
+.hero {
+    background: url("bg.jpg");
+    background-size: cover;
+    height: 50vh;
+    background-position: 0%;
+
+}
+
+.hero-subset,
+button {
+    background: #5200FF;
+    color: #FFFFFF;
+}
+
+.hero-subset {
+    height: 50vh;
+    padding: 0 42px;
+    opacity: 0.8;
+}
+
+.hero,
+.sign-up {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up {
+    margin-top: 5rem;
+}
+
+.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+}
+
+input {
+    border: 1px solid #C7C7C7;
+}
+
+input,
+button {
+    width: 40rem;
+    padding: 1rem 0;
+    margin: 1rem 0 2rem;
+}
+
+button {
+    border: 0;
+}
+
+label {
+    width: 100%;
+    text-align: start;
+    margin-left: 10rem;
+
+}
