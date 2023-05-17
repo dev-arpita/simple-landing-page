@@ -67,6 +67,11 @@ input {
     outline: none;
     margin-bottom: 2.5em;
 }
+/*focus state*/
+
+input[type="text"]:focus {
+    border: 3px solid black;
+}
 
 button {
     width: 100%;
